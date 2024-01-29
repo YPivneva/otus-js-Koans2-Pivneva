@@ -3,8 +3,8 @@ module("About Regular Expressions (topics/about_regular_expressions.js)");
 
 test("exec", function() {
     var numberFinder = /(\d).(\d*)/;
-    var results = numberFinder.exec("what if 6 turned out to be 9?");
-    ok(results.equalTo(["6 9", "6", "9"]), 'what is the value of results?');		
+    var results = numberFinder.exec("what if 6 turned out to be 9");
+    ok(results.equalTo(["6 turned out to be 9?", "6 ", "9"]), 'what is the value of results?');		
 });
 
 test("test", function() {
@@ -14,7 +14,7 @@ test("test", function() {
 
 test("match", function() {
     var matches = "what if 6 turned out to be 9?".match(/(\d)/g);
-    ok(matches.equalTo([6, 9]), 'what is the value of matches?');
+    ok(matches.equalTo(["6", "9"]), 'what is the value of matches?');
 });
 
 test("replace", function() {
