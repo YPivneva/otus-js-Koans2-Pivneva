@@ -20,7 +20,7 @@ test("character Type", function() {
 
 test("escape character", function() {
     var stringWithAnEscapedCharacter  = "\u0041pple";
-    equal("\u0041pple", stringWithAnEscapedCharacter, 'what  is the value of stringWithAnEscapedCharacter?');
+    equal("Apple", stringWithAnEscapedCharacter, 'what  is the value of stringWithAnEscapedCharacter?');
 });
 
 test("string.length", function() {
